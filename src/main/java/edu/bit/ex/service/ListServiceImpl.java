@@ -36,4 +36,9 @@ public class ListServiceImpl implements ListService {
 		return mapper.getTotal(cri);
 	}
 
+	@Override
+	public InfoVO getContetnView(int bId) {
+		return mapper.getContentView(bId);
+	}
+
 }

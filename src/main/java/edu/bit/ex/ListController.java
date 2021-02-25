@@ -7,6 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import edu.bit.ex.service.ListService;
 import edu.bit.ex.vo.Criteria;
+import edu.bit.ex.vo.InfoVO;
 import edu.bit.ex.vo.PageVO;
 import jdk.internal.org.jline.utils.Log;
 import lombok.AllArgsConstructor;
@@ -47,5 +48,22 @@ public class ListController {
 		
 		return mav;
 	}
+	
+	
+	@GetMapping("/list/{bId}")
+	public ModelAndView ContentView(ModelAndView mav, InfoVO infoVO) throws Exception {
+		log.debug("list()");
+		log.info("list()");
+		
+		mav.setViewName("contentView");
+		mav.addObject("contentView", service.getContetnView(infoVO.getbId()));
+		
+		
+
+		
+		return mav;
+	}
+	
+	
 
 }

@@ -22,5 +22,10 @@
 		]]>
 	</select>
 	
+	<select id="getContentView" resultType="edu.bit.ex.vo.InfoVO">
+		<![CDATA[
+			select * from mvc_board3 where bId=#{bId}
+		]]>
+	</select>
 	
 </mapper>

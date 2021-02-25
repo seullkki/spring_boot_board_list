@@ -104,12 +104,12 @@
 			
 			<td>
 				<c:forEach begin="1" end="${list.bIndent }">[re:]</c:forEach>
-				<a href="list/${list.bId}">${list.bTitle }</a>			
+				<a href="${pageContext.request.contextPath }/list/${list.bId}">${list.bTitle }</a>			
 			</td>
 			
 			<td>${list.bDate }</td>
 			<td>${list.bHit }</td>
-			<td><a class="delete" href="list/${list.bId}">삭제</a></td>						
+			<td><a class="delete" href="${pageContext.request.contextPath }/list/${list.bId}">삭제</a></td>						
 		</tr>	
 		</c:forEach>
 		

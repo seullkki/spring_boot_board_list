@@ -12,6 +12,8 @@ public interface ListService {
 
 	public int getTotal(Criteria cri);
 
+	public InfoVO getContetnView(int getbId);
+
 //	public List<EmpVO> getList();
 
 }

@@ -15,6 +15,8 @@ public interface ListMapper {
 
 	public int getTotal(Criteria cri);
 
+	public InfoVO getContentView(int bId);
+
 //	public List<EmpVO> getList();
 
 }
