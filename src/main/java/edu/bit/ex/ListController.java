@@ -3,6 +3,7 @@ package edu.bit.ex;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import edu.bit.ex.service.ListService;
@@ -51,18 +52,17 @@ public class ListController {
 	
 	
 	@GetMapping("/list/{bId}")
-	public ModelAndView ContentView(ModelAndView mav, InfoVO infoVO) throws Exception {
+	public ModelAndView contentView(ModelAndView mav, InfoVO infoVO) throws Exception {
 		log.debug("list()");
 		log.info("list()");
 		
 		mav.setViewName("contentView");
 		mav.addObject("contentView", service.getContetnView(infoVO.getbId()));
 		
-		
-
-		
 		return mav;
 	}
+	
+
 	
 	
 
