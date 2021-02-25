@@ -49,7 +49,7 @@
 			<td colspan="2">
 				<input type="submit" value="수정">
 				<a href="/list">목록 보기</a>
-				<a href="delete?bId=${contentView.bId }">삭제</a>
+				<a href="/list/delete?bId=${contentView.bId }">삭제</a>
 				<a href="/list/replyView?bId=${contentView.bId }">답변</a>
 			</td>
 		</tr>

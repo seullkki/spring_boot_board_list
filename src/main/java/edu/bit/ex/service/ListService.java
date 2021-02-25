@@ -20,6 +20,8 @@ public interface ListService {
 
 	public void reply(InfoVO infoVO);
 
+	public void delete(InfoVO infoVO);
+
 //	public List<EmpVO> getList();
 
 }

@@ -59,4 +59,11 @@ public class ListServiceImpl implements ListService {
 		mapper.reply(infoVO);
 	}
 
+	@Override
+	public void delete(InfoVO infoVO) {
+		mapper.delete(infoVO);
+	}
+
+
+
 }

@@ -58,4 +58,11 @@
 		]]>
 	</update>
 	
+	<!-- delete "from" 잊지 말것 -->
+	<delete id="delete" >
+		<![CDATA[
+			delete from mvc_board3 where bId = #{bId}
+		]]>
+	</delete>
+	
 </mapper>

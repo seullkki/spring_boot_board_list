@@ -27,6 +27,8 @@ public interface ListMapper {
 
 	public void addHit(int bId);
 
+	public void delete(InfoVO infoVO);
+
 //	public List<EmpVO> getList();
 
 }

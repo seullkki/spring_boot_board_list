@@ -109,5 +109,14 @@ public class ListController {
 		
 		return "redirect:/list";				
 	}
+	
+	@RequestMapping("/list/delete")
+	public String delete(InfoVO infoVO) {
+		log.info("delete");
+		
+		service.delete(infoVO);
+		
+		return "redirect:/list";				
+	}
 
 }
