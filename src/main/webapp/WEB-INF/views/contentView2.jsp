@@ -57,11 +57,11 @@
 
 		<tr>
 			<td colspan="2">
-				<input type="submit" value="수정">
 			<div class="btn-group">
-				<button type="button" class="btn btn-warning"><a href="/list"><p class="text-danger">목록 보기</p></a></button>
-				<button type="button" class="btn btn-warning"><a href="/list/delete?bId=${contentView.bId }"><p class="text-danger">삭제</p></a></button>
-				<button type="button" class="btn btn-warning"><a href="/list/replyView?bId=${contentView.bId }"><p class="text-danger">답변</p></a></button>
+				<input type="submit" class="btn btn-warning" value="수정">
+				<button type="button" class="btn btn-warning"><a href="/list" style="color: white">목록 보기</a></button>
+				<button type="button" class="btn btn-warning"><a href="/list/delete?bId=${contentView.bId }" style="color: white">삭제</a></button>
+				<button type="button" class="btn btn-warning"><a href="/list/replyView?bId=${contentView.bId }" style="color: white">답변</a></button>
 			</div>
 			</td>
 		</tr>

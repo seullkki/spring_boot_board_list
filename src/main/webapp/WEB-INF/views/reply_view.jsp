@@ -23,37 +23,48 @@
 	<div class="container">
     <table class="table table-hover"  width="100%" cellspacing="0">
 		<tr>
-			<td>글번호</td>
-			<td>${reply_view.bId }</td>
+			<dl>
+				<td><h4><dt><mark>글번호</mark></dt></h4></td>
+				<td>${reply_view.bId }</td>
+			</dl>
 		</tr>
 		
 		<tr>
-			<td>조회수</td>
-			<td>${reply_view.bHit }</td>
+			<dl>
+				<td><h4><dt><mark>조회수</mark></dt></h4></td>
+				<td>${reply_view.bHit }</td>
+			</dl>
 		</tr>
 		
 		<tr>
-			<td>이름</td>
-			<td><input type="text" name="bName" value="${reply_view.bName }"></td>
+			<dl>
+				<td><h4><dt><mark>이름</mark></dt></h4></td>
+				<td><input type="text" name="bName" value="${reply_view.bName }"></td>
+			</dl>
 		</tr>
 		
 		<tr>
-			<td>제목</td>
-			<td><input type="text" name="bTitle" value="${reply_view.bTitle }"></td>
+			<dl>
+				<td><h4><dt><mark>제목</mark></dt></h4></td>
+				<td><input type="text" name="bTitle" value="${reply_view.bTitle }"></td>
+			</dl>
 		</tr>
 		
 		<tr>
-			<td>내용</td>
-			<td><textarea name="bContent" cols="30" rows="50">${reply_view.bContent }</textarea></td>
+			<dl>
+				<td><h4><dt><mark>내용</mark></dt></h4></td>
+				<td><textarea name="bContent" cols="80" rows="30">${reply_view.bContent }</textarea></td>
+			</dl>
 		</tr>
 
 		<tr>
 			<td colspan="2">
-				<input type="submit" value="답변 완료">
-				<a href="/list">목록 보기</a>
+				<div class="btn-group">
+					<input type="submit" class="btn btn-warning" value="답변 완료">
+					<button type="button" class="btn btn-warning"><a href="/list" style="color: white">목록 보기</a>
+				</div>
 			</td>
 		</tr>
-			
 		
 	</table>
 	</div>
