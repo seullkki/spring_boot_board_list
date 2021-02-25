@@ -21,36 +21,48 @@
 	<div class="container">
     <table class="table table-hover"  width="100%" cellspacing="0">
 		<tr>
-			<td>글번호</td>
-			<td>${contentView.bId }</td>
+			<dl>
+				<td><h4><dt><mark>글번호</mark></dt></h4></td>
+				<td>${contentView.bId }</td>
+			</dl>
 		</tr>
 		
 		<tr>
-			<td>조회수</td>
-			<td>${contentView.bHit }</td>
+			<dl>
+				<td><h4><dt><mark>조회수</mark></dt></h4></td>
+				<td>${contentView.bHit }</td>
+			</dl>
 		</tr>
 		
 		<tr>
-			<td>이름</td>
-			<td><input type="text" name="bName" value="${contentView.bName }"></td>
+			<dl>
+				<td><h4><dt><mark>이름</mark></dt></h4></td>
+				<td><input type="text" name="bName" value="${contentView.bName }"></td>
+			</dl>
 		</tr>
 		
 		<tr>
-			<td>제목</td>
-			<td><input type="text" name="bTitle" value="${contentView.bTitle }"></td>
+			<dl>
+				<td><h4><dt><mark>제목</mark></dt></h4></td>
+				<td><input type="text" name="bTitle" value="${contentView.bTitle }"></td>
+			</dl>
 		</tr>
 		
 		<tr>
-			<td>내용</td>
-			<td><textarea name="bContent" cols="30" rows="50">${contentView.bContent }</textarea></td>
+			<dl>
+				<td><h4><dt><mark>내용</mark></dt></h4></td>
+				<td><textarea name="bContent" cols="80" rows="30">${contentView.bContent }</textarea></td>
+			</dl>
 		</tr>
 
 		<tr>
 			<td colspan="2">
 				<input type="submit" value="수정">
-				<a href="/list">목록 보기</a>
-				<a href="/list/delete?bId=${contentView.bId }">삭제</a>
-				<a href="/list/replyView?bId=${contentView.bId }">답변</a>
+			<div class="btn-group">
+				<button type="button" class="btn btn-warning"><a href="/list"><p class="text-danger">목록 보기</p></a></button>
+				<button type="button" class="btn btn-warning"><a href="/list/delete?bId=${contentView.bId }"><p class="text-danger">삭제</p></a></button>
+				<button type="button" class="btn btn-warning"><a href="/list/replyView?bId=${contentView.bId }"><p class="text-danger">답변</p></a></button>
+			</div>
 			</td>
 		</tr>
 			
