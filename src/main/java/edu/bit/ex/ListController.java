@@ -118,5 +118,21 @@ public class ListController {
 		
 		return "redirect:/list";				
 	}
+	
+	@RequestMapping("/list/write_view")
+	public String writeView(InfoVO infoVO) {
+		log.info("writeView");
+		
+		return "write_view";				
+	}
+	
+	@RequestMapping("/list/write")
+	public String write(InfoVO infoVO) {
+		log.info("write");
+		
+		service.write(infoVO);
+		
+		return "redirect:/list";				
+	}
 
 }

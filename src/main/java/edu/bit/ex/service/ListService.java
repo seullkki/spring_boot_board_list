@@ -22,6 +22,8 @@ public interface ListService {
 
 	public void delete(InfoVO infoVO);
 
+	public void write(InfoVO infoVO);
+
 //	public List<EmpVO> getList();
 
 }

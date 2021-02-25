@@ -115,7 +115,7 @@
 		
 		<tr>
 			<!-- 링크 미완성 -->
-			<td colspan="6"><a href="${pageContext.request.contextPath }/restful/board/">글 작성</a></td>
+			<td colspan="6"><a href="/list/write_view">글 작성</a></td>
 		</tr>	
 	</table>
 </div>    
