@@ -1,9 +1,13 @@
 package edu.bit.ex;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import edu.bit.ex.service.ListService;
@@ -53,17 +57,40 @@ public class ListController {
 	
 	@GetMapping("/list/{bId}")
 	public ModelAndView contentView(ModelAndView mav, InfoVO infoVO) throws Exception {
-		log.debug("list()");
-		log.info("list()");
+		log.debug("contentView()");
+		log.info("contentView()");
 		
-		mav.setViewName("contentView");
+		mav.setViewName("contentView2");
 		mav.addObject("contentView", service.getContetnView(infoVO.getbId()));
 		
 		return mav;
 	}
 	
-
+	// restful - modify 실패
+//	@PutMapping("/list/{bId}")
+//	public ResponseEntity<String> modify(@RequestBody InfoVO infoVO) {
+//		ResponseEntity<String> entity = null;
+//		
+//		log.info("modify");
+//		
+//		try {
+//			service.modify(infoVO);
+//			entity = new ResponseEntity<String>("SUCCESS", HttpStatus.OK);
+//		}catch(Exception e){
+//			e.printStackTrace();
+//			entity = new ResponseEntity<String>(e.getMessage(), HttpStatus.BAD_REQUEST);
+//		}
+//	
+//		return entity;
+//	}
 	
+	
+	@RequestMapping("/list/modify")
+	public String modify(InfoVO infoVO) {
+		log.info("modify");
+		service.modify(infoVO);
+		return "redirect:/list";				// restful 사용하지 않을 때는, return으로 list 돌려줘야 함.
+	}
 	
 
 }

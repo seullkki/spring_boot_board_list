@@ -14,6 +14,8 @@ public interface ListService {
 
 	public InfoVO getContetnView(int getbId);
 
+	public void modify(InfoVO infoVO);
+
 //	public List<EmpVO> getList();
 
 }

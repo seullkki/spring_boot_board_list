@@ -28,4 +28,10 @@
 		]]>
 	</select>
 	
+	<update id="modify" >
+		<![CDATA[
+			update mvc_board3 set bName=#{bName}, bTitle=#{bTitle}, bContent=#{bContent} where bId=#{bId}
+		]]>
+	</update>
+	
 </mapper>

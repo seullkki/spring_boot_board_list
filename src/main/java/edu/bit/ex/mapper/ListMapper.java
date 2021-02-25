@@ -17,6 +17,8 @@ public interface ListMapper {
 
 	public InfoVO getContentView(int bId);
 
+	public void modify(InfoVO infoVO);
+
 //	public List<EmpVO> getList();
 
 }

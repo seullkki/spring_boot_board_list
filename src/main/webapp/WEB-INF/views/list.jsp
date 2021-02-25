@@ -104,7 +104,7 @@
 			
 			<td>
 				<c:forEach begin="1" end="${list.bIndent }">[re:]</c:forEach>
-				<a href="${pageContext.request.contextPath }/list/${list.bId}">${list.bTitle }</a>			
+				<a href="/list/${list.bId}">${list.bTitle }</a>			
 			</td>
 			
 			<td>${list.bDate }</td>

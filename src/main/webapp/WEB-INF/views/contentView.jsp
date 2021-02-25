@@ -58,7 +58,7 @@
 				success : function(result){
 					if(result == "SUCCESS"){
 						console.log("result : " + result );
-						$(location).attr('href', 'list')
+						$(location).attr('href', '/list')
 					}
 				},
 				error : function(e){
@@ -79,7 +79,7 @@
 
 <div class="container">
     <table class="table table-hover"  width="100%" cellspacing="0">
-	<form id="modify" action="list/${content_view.bId }" >
+	<form id="modify" action="/list/${contentView.bId }" >
 	<input type="hidden" id="bId" value="${contentView.bId }">
 		<tr>
 			<td>글번호</td>
@@ -109,7 +109,7 @@
 		<tr>
 			<td colspan="2">
 				<input type="submit" value="수정">
-				<a href="${pageContext.request.contextPath }/restful/board/">목록 보기</a>
+				<a href="/list">목록 보기</a>				<!-- /list 이렇게 경로를 지정해야 제대로 작동함 -->
 				<a href="${pageContext.request.contextPath }/restful/board/reply_view/${contentView.bId}">답변</a>
 			</td>		
 		</tr>	
