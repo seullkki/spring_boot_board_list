@@ -34,4 +34,28 @@
 		]]>
 	</update>
 	
+	<select id="getReplyView" resultType="edu.bit.ex.vo.InfoVO">
+		<![CDATA[
+			select * from mvc_board3 where bId=#{bId}
+		]]>
+	</select>
+
+	<insert id="reply" >
+		<![CDATA[
+			insert into mvc_board3 (bId, bName, bTitle, bContent, bGroup, bStep, bIndent) values (mvc_board3_seq.nextval, #{bName}, #{bTitle}, #{bContent}, ${bGroup}, #{bStep}+1, #{bIndent}+1 )
+		]]>
+	</insert>
+	
+	<update id="replyShape" >
+		<![CDATA[
+			update mvc_board3 set bStep = bStep + 1 where bGroup = #{bGroup} and bStep > #{bStep}
+		]]>
+	</update>
+	
+	<update id="addHit" >
+		<![CDATA[
+			update mvc_board3 set bHit = bHit + 1 where bId = #{bId}
+		]]>
+	</update>
+	
 </mapper>

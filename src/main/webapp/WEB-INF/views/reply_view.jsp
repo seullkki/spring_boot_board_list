@@ -15,48 +15,48 @@
 
 </head>
 <body>
-
-	<form action="/list/modify">
-	<input type="hidden" name="bId" value="${contentView.bId }">
+	<form action="reply">
+	<input type="hidden" name="bId" value="${reply_view.bId }">
+	<input type="hidden" name="bGroup" value="${reply_view.bGroup }">
+	<input type="hidden" name="bStep" value="${reply_view.bStep }">
+	<input type="hidden" name="bIndent" value="${reply_view.bIndent }">
 	<div class="container">
     <table class="table table-hover"  width="100%" cellspacing="0">
 		<tr>
 			<td>글번호</td>
-			<td>${contentView.bId }</td>
+			<td>${reply_view.bId }</td>
 		</tr>
 		
 		<tr>
 			<td>조회수</td>
-			<td>${contentView.bHit }</td>
+			<td>${reply_view.bHit }</td>
 		</tr>
 		
 		<tr>
 			<td>이름</td>
-			<td><input type="text" name="bName" value="${contentView.bName }"></td>
+			<td><input type="text" name="bName" value="${reply_view.bName }"></td>
 		</tr>
 		
 		<tr>
 			<td>제목</td>
-			<td><input type="text" name="bTitle" value="${contentView.bTitle }"></td>
+			<td><input type="text" name="bTitle" value="${reply_view.bTitle }"></td>
 		</tr>
 		
 		<tr>
 			<td>내용</td>
-			<td><textarea name="bContent" cols="30" rows="50">${contentView.bContent }</textarea></td>
+			<td><textarea name="bContent" cols="30" rows="50">${reply_view.bContent }</textarea></td>
 		</tr>
 
 		<tr>
 			<td colspan="2">
-				<input type="submit" value="수정">
+				<input type="submit" value="답변 완료">
 				<a href="/list">목록 보기</a>
-				<a href="delete?bId=${contentView.bId }">삭제</a>
-				<a href="/list/replyView?bId=${contentView.bId }">답변</a>
 			</td>
 		</tr>
 			
 		
-	</table>  	
-  </div>   
+	</table>
+	</div>
 	</form>
 </body>
 </html>

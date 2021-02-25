@@ -19,6 +19,14 @@ public interface ListMapper {
 
 	public void modify(InfoVO infoVO);
 
+	public InfoVO getReplyView(int bId);
+
+	public void reply(InfoVO infoVO);
+
+	public void replyShape(InfoVO infoVO);
+
+	public void addHit(int bId);
+
 //	public List<EmpVO> getList();
 
 }

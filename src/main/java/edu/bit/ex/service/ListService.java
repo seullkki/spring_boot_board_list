@@ -16,6 +16,10 @@ public interface ListService {
 
 	public void modify(InfoVO infoVO);
 
+	public InfoVO getReplyView(int getbId);
+
+	public void reply(InfoVO infoVO);
+
 //	public List<EmpVO> getList();
 
 }

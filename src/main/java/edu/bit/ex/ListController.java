@@ -92,5 +92,22 @@ public class ListController {
 		return "redirect:/list";				// restful 사용하지 않을 때는, return으로 list 돌려줘야 함.
 	}
 	
+	
+	@RequestMapping("/list/replyView")
+	public String replyView(InfoVO infoVO, Model model) {
+		log.info("replyView");
+		
+		model.addAttribute("reply_view", service.getReplyView(infoVO.getbId()));
+		return "reply_view";				
+	}
+	
+	@RequestMapping("/list/reply")
+	public String reply(InfoVO infoVO) {
+		log.info("reply");
+		
+		service.reply(infoVO);
+		
+		return "redirect:/list";				
+	}
 
 }

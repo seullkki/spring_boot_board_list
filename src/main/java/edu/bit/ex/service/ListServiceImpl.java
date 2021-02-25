@@ -36,15 +36,27 @@ public class ListServiceImpl implements ListService {
 		return mapper.getTotal(cri);
 	}
 
-	// hit 추가 필요
+	
 	@Override
 	public InfoVO getContetnView(int bId) {
+		mapper.addHit(bId);
 		return mapper.getContentView(bId);
 	}
 
 	@Override
 	public void modify(InfoVO infoVO) {
 		mapper.modify(infoVO);
+	}
+
+	@Override
+	public InfoVO getReplyView(int bId) {
+		return mapper.getReplyView(bId);
+	}
+
+	@Override
+	public void reply(InfoVO infoVO) {
+		mapper.replyShape(infoVO);
+		mapper.reply(infoVO);
 	}
 
 }
